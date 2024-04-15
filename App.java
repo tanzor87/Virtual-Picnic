@@ -6,8 +6,13 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        FileToArray array = new FileToArray();
         String fileName = "input.txt";
-        System.out.println(array.fileToArray(fileName).size());
+
+        FileToArray array = new FileToArray();
+        System.out.println("Количество слов в файле: " + array.fileToArray(fileName).size());
+
+        System.out.println();
+        LongWord words = new LongWord();
+        words.longWord(fileName);
     }
 }
