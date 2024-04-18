@@ -9,10 +9,21 @@ public class App {
         String fileName = "input.txt";
 
         FileToArray array = new FileToArray();
-        System.out.println("Количество слов в файле: " + array.fileToArray(fileName).size());
+        System.out.println("Общее количество овощей и фруктов в корзине составило: " + array.fileToArray(fileName).size());
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println();
         LongWord words = new LongWord();
         words.longWord(fileName);
+
+        System.out.println();
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        FrequencyWords freqWords = new FrequencyWords();
+        freqWords.frequencyWords(fileName);
+        freqWords.showWords();
+
+        System.out.println();
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        freqWords.sortedShowWords();
     }
 }
